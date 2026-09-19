@@ -1,0 +1,21 @@
+{
+  "name": "jev-playground",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "node --env-file=.env src/check.ts",
+    "email": "node --env-file=.env src/email-triage.ts",
+    "claims": "node --env-file=.env src/claim-review.ts",
+    "pr": "node --env-file=.env src/pr-verify.ts",
+    "prune": "node --env-file=.env src/github-prune.ts",
+    "probe:openrouter": "node --env-file=.env src/probe-openrouter.ts"
+  },
+  "dependencies": {
+    "@ai-sdk/typesafe-ai": "^3.0.3",
+    "@openrouter/ai-sdk-provider": "^3.0.0",
+    "ai": "^7.0.106"
+  },
+  "bin": {
+    "jev-filter": "bin/jev-filter.ts"
+  }
+}
